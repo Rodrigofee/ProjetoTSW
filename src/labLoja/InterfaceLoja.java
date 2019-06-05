@@ -15,8 +15,8 @@ import java.util.ArrayList;
 public interface InterfaceLoja {
     
   //objetivo: cadastrar um client na tabela Loja
-    void cadastrarLoja(ClasseBasicaLoja l) throws Exception;
-    void atualizarLoja(ClasseBasicaLoja l) throws Exception;
-    void removerLoja(ClasseBasicaLoja l) throws Exception;
+    boolean cadastrarLoja(ClasseBasicaLoja l) throws Exception;
+    boolean atualizarLoja(ClasseBasicaLoja l) throws Exception;
+    boolean removerLoja(ClasseBasicaLoja l) throws Exception;
     ArrayList<ClasseBasicaLoja> listarLoja(ClasseBasicaLoja l) throws Exception;
 }
