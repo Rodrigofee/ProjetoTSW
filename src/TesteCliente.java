@@ -25,7 +25,7 @@ class TesteCliente {
 		assertEquals("mail@mail.com", email);
 		
 		String telefone = cliente.getTelefoneCliente();
-		assertEquals("Nome", telefone);
+		assertEquals("819865465454", telefone);
 		
 	}
 
