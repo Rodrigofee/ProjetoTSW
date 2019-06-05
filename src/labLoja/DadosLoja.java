@@ -19,7 +19,7 @@ import java.sql.ResultSet;
 public class DadosLoja extends Dados implements InterfaceLoja {
 
    @Override
-    public void cadastrarLoja(ClasseBasicaLoja l) throws Exception {
+    public boolean cadastrarLoja(ClasseBasicaLoja l) throws Exception {
         //abrindo a conexão
         Connection conn = conectarPrepareStatment();
         //instrução sql correspondente a inserção da Loja
@@ -39,10 +39,12 @@ public class DadosLoja extends Dados implements InterfaceLoja {
         }
         //fechando a conexão com o banco de dados
         desconectar();
+        
+        return true;
     }
 
     @Override
-    public void atualizarLoja(ClasseBasicaLoja l) throws Exception {
+    public boolean atualizarLoja(ClasseBasicaLoja l) throws Exception {
       Connection conn = conectarPrepareStatment();
         //instrução sql correspondente a atualização do Cliente
         String sql = "UPDATE Loja SET CNPJ_Loja = ?, Nome_Loja = ?, End_Loja = ?, Telefone_Loja where Cd_Loja = ? ";
@@ -60,10 +62,12 @@ public class DadosLoja extends Dados implements InterfaceLoja {
         }
         //fechando a conexão com o banco de dados
         desconectar();
+        
+        return true;
     }
 
     @Override
-    public void removerLoja(ClasseBasicaLoja l) throws Exception {
+    public boolean removerLoja(ClasseBasicaLoja l) throws Exception {
          Connection conn = conectarPrepareStatment();
         //instrução sql correspondente a remoção do Loja
         String sql = "DELETE FROM Loja WHERE Cd_Loja =  ";
@@ -79,6 +83,8 @@ public class DadosLoja extends Dados implements InterfaceLoja {
         }
         //fechando a conexão com o banco de dados
         desconectar();
+        
+        return true;
     }
    
     @Override

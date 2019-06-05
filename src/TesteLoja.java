@@ -48,10 +48,27 @@ public class TesteLoja {
 		try {
 			when(daoFalsoLoja.listarLoja(loja1)).thenReturn(lojas);
 			assertEquals(lojas,daoFalsoLoja.listarLoja(loja1));
+			
+			when(daoFalsoLoja.removerLoja(loja1)).thenReturn(true);
+			assertEquals(true,daoFalsoLoja.removerLoja(loja1));
+			
+			when(daoFalsoLoja.atualizarLoja(loja1)).thenReturn(true);
+			assertEquals(true,daoFalsoLoja.atualizarLoja(loja1));
+			
+			when(daoFalsoLoja.cadastrarLoja(loja1)).thenReturn(true);
+			assertEquals(true,daoFalsoLoja.cadastrarLoja(loja1));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+	}
+	
+	@Test
+	void atualizarLoja() {
+		
+		
+		
 		
 	}
 	
