@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public interface InterfaceCliente {
 
     //objetivo: cadastrar um client na tabela cliente
-    void cadastrarCliente(ClasseBasicaCliente c) throws Exception;
+	void cadastrarCliente(ClasseBasicaCliente c) throws Exception;
 
     void atualizarCliente(ClasseBasicaCliente c) throws Exception;
 

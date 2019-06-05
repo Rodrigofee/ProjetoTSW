@@ -6,18 +6,18 @@ import labPedido.ClasseBasicaPedido;
 import labServico.ClasseBasicaServico;
 
 
-public class TesteServico {
+ public class TesteServico {
 	
 	@Test
-	void cadastrarServico() {
-		/*ClasseBasicaPedido pedido = new ClasseBasicaPedido();
+	public void cadastrarServico() {
+		ClasseBasicaPedido pedido = new ClasseBasicaPedido();
 		pedido.setNumeroPedido(123456);
 		pedido.setDioptria_OD_Cil(12.2f);
 		pedido.setDioptria_OD_Esf(13.3f);
 		pedido.setDioptria_OE_Cil(14.7f);
 		pedido.setDioptria_OE_Esf(6.25f);
 		pedido.setNumeroPedido(123456);
-		*/
+	
 		
 		ClasseBasicaServico servico = new ClasseBasicaServico();
 		servico.setCodigoServico(123654);
