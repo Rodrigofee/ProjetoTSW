@@ -1,5 +1,9 @@
 import labLoja.ClasseBasicaLoja;
 import labPedido.ClasseBasicaPedido;
+import labPedido.DadosPedido;
+import static org.mockito.Mockito.*;
+
+import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -8,6 +12,9 @@ import org.junit.jupiter.api.Test;
 import labCliente.ClasseBasicaCliente;
 
 public class TestePedido {
+	ArrayList<ClasseBasicaPedido> listaPedidos = new ArrayList<ClasseBasicaPedido>();
+	ClasseBasicaPedido pedido;
+	
 	@Test
 	void cadastrarPedido() {
 		  
@@ -35,6 +42,31 @@ public class TestePedido {
 		assertEquals(15.2f, pedido.getDioptria_OE_Cil());
 		assertEquals(17.5f,pedido.getDioptria_OE_Esf());
 		assertEquals(loja,pedido.getClasseBasicaLoja());
+		
+	}
+	
+	@Test
+	void Metodos() {
+		DadosPedido daoFalsoPedido = mock(DadosPedido.class);
+		
+		listaPedidos.add(pedido);
+		
+		try {
+			when(daoFalsoPedido.listarPedido(pedido)).thenReturn(listaPedidos);
+			assertEquals(listaPedidos,daoFalsoPedido.listarPedido(pedido));
+			
+			when(daoFalsoPedido.cadastrarPedido(pedido)).thenReturn(true);
+			assertEquals(true,daoFalsoPedido.cadastrarPedido(pedido));
+			
+			when(daoFalsoPedido.removerPedido(pedido)).thenReturn(true);
+			assertEquals(true,daoFalsoPedido.removerPedido(pedido));
+			
+			when(daoFalsoPedido.atualizarPedido(pedido)).thenReturn(true);
+			assertEquals(true,daoFalsoPedido.atualizarPedido(pedido));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 

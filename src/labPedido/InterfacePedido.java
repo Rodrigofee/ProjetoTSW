@@ -14,8 +14,8 @@ import java.util.ArrayList;
  */
 public interface InterfacePedido {
     
-  void cadastrarPedido(ClasseBasicaPedido p) throws Exception;
-    void atualizarPedido(ClasseBasicaPedido p) throws Exception;
-    void removerPedido(ClasseBasicaPedido p) throws Exception;
+	boolean cadastrarPedido(ClasseBasicaPedido p) throws Exception;
+    boolean atualizarPedido(ClasseBasicaPedido p) throws Exception;
+    boolean removerPedido(ClasseBasicaPedido p) throws Exception;
     ArrayList<ClasseBasicaPedido> listarPedido(ClasseBasicaPedido p) throws Exception;
 }

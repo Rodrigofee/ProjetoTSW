@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class DadosPedido extends Dados implements InterfacePedido {
 
    @Override
-    public void cadastrarPedido(ClasseBasicaPedido p) throws Exception {
+    public boolean cadastrarPedido(ClasseBasicaPedido p) throws Exception {
         //abrindo a conexão
         Connection conn = conectarPrepareStatment();
         //instrução sql correspondente a inserção da Loja
@@ -39,10 +39,11 @@ public class DadosPedido extends Dados implements InterfacePedido {
         }
         //fechando a conexão com o banco de dados
         desconectar();
+        return true;
     }
 
     @Override
-    public void atualizarPedido(ClasseBasicaPedido p) throws Exception {
+    public boolean atualizarPedido(ClasseBasicaPedido p) throws Exception {
       Connection conn = conectarPrepareStatment();
         //instrução sql correspondente a atualização do Cliente
         String sql = "UPDATE Pedido SET Dioptria_OD_Esf = ?, Dioptria_OE_Esf = ?, Dioptria_OD_Cil = ?, Dioptria_OE_Cil where Num_Pedido = ? ";
@@ -60,10 +61,11 @@ public class DadosPedido extends Dados implements InterfacePedido {
         }
         //fechando a conexão com o banco de dados
         desconectar();
+        return true;
     }
 
     @Override
-    public void removerPedido(ClasseBasicaPedido p) throws Exception {
+    public boolean removerPedido(ClasseBasicaPedido p) throws Exception {
          Connection conn = conectarPrepareStatment();
         //instrução sql correspondente a remoção do Loja
         String sql = "DELETE FROM Pedido WHERE Num_Pedido =  ";
@@ -79,6 +81,7 @@ public class DadosPedido extends Dados implements InterfacePedido {
         }
         //fechando a conexão com o banco de dados
         desconectar();
+        return true;
     }
    
     @Override
