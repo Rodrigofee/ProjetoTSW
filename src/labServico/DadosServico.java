@@ -20,7 +20,7 @@ import java.util.ArrayList;
 public class DadosServico extends Dados implements InterfaceServico {
 
     @Override
-    public void cadastrarServico(ClasseBasicaServico s) throws Exception {
+    public boolean cadastrarServico(ClasseBasicaServico s) throws Exception {
         //abrindo a conexão
         Connection conn = conectarPrepareStatment();
         //instrução sql correspondente a inserção do Cliente
@@ -38,10 +38,11 @@ public class DadosServico extends Dados implements InterfaceServico {
         }
         //fechando a conexão com o banco de dados
         desconectar();
+        return true;
     }
 
     @Override
-    public void atualizarServico(ClasseBasicaServico s) throws Exception {
+    public boolean atualizarServico(ClasseBasicaServico s) throws Exception {
       Connection conn = conectarPrepareStatment();
         //instrução sql correspondente a atualização do Cliente
         String sql = "UPDATE Servico SET Cd_Servico = ?, Data_Entrada = ?, Data_Saida = ?, Status_Servico, Valor_Servico where Cd_Servico = ? ";
@@ -59,10 +60,11 @@ public class DadosServico extends Dados implements InterfaceServico {
         }
         //fechando a conexão com o banco de dados
         desconectar();
+        return true;
     }
 
     @Override
-    public void removerServico(ClasseBasicaServico s) throws Exception {
+    public boolean removerServico(ClasseBasicaServico s) throws Exception {
          Connection conn = conectarPrepareStatment();
         //instrução sql correspondente a remoção do cliente
         String sql = "DELETE FROM Servico WHERE Cd_Servico =  ";
@@ -78,6 +80,7 @@ public class DadosServico extends Dados implements InterfaceServico {
         }
         //fechando a conexão com o banco de dados
         desconectar();
+        return true;
     }
    
     @Override

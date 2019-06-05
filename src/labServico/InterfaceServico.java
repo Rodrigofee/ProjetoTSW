@@ -14,9 +14,9 @@ import java.util.ArrayList;
  */
 public interface InterfaceServico {
     //objetivo: cadastrar um Servico na tabela Serviço
-    void cadastrarServico(ClasseBasicaServico s) throws Exception;
-    void atualizarServico(ClasseBasicaServico s) throws Exception;
-    void removerServico(ClasseBasicaServico s) throws Exception;
+    boolean cadastrarServico(ClasseBasicaServico s) throws Exception;
+    boolean atualizarServico(ClasseBasicaServico s) throws Exception;
+    boolean removerServico(ClasseBasicaServico s) throws Exception;
     ArrayList<ClasseBasicaServico> listarServico(ClasseBasicaServico s) throws Exception;
 }
     
