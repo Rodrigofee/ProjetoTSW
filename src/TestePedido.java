@@ -10,7 +10,7 @@ import labCliente.ClasseBasicaCliente;
 public class TestePedido {
 	@Test
 	void cadastrarPedido() {
-		
+		  
 		ClasseBasicaLoja loja = new ClasseBasicaLoja(); 
 		loja.setCnpjLoja("asdasdasd");
 		loja.setCodigoLoja(12);
