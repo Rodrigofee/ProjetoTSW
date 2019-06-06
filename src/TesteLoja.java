@@ -14,7 +14,7 @@ public class TesteLoja {
 	ArrayList<ClasseBasicaLoja> lojas = new ArrayList<ClasseBasicaLoja>();
 	
 	@Test
-	void cadastrarloja() {
+	public void cadastrarloja() {
 		
 		ClasseBasicaLoja loja = new ClasseBasicaLoja();
 		loja.setCodigoLoja(12);
@@ -41,7 +41,7 @@ public class TesteLoja {
 	}
 	
 	@Test
-	void metodos() {
+	public void metodos() {
 		DadosLoja daoFalsoLoja = mock(DadosLoja.class);
 		lojas.add(loja1);
 		
@@ -59,16 +59,7 @@ public class TesteLoja {
 			assertEquals(true,daoFalsoLoja.cadastrarLoja(loja1));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
-		
-	}
-	
-	@Test
-	void atualizarLoja() {
-		
-		
-		
 		
 	}
 	

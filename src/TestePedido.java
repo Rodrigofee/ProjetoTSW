@@ -16,7 +16,7 @@ public class TestePedido {
 	ClasseBasicaPedido pedido;
 	
 	@Test
-	void cadastrarPedido() {
+	public void cadastrarPedido() {
 		  
 		ClasseBasicaLoja loja = new ClasseBasicaLoja(); 
 		loja.setCnpjLoja("asdasdasd");
@@ -46,7 +46,7 @@ public class TestePedido {
 	}
 	
 	@Test
-	void Metodos() {
+	public void Metodos() {
 		DadosPedido daoFalsoPedido = mock(DadosPedido.class);
 		
 		listaPedidos.add(pedido);
@@ -65,7 +65,6 @@ public class TestePedido {
 			assertEquals(true,daoFalsoPedido.atualizarPedido(pedido));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 		
 	}

@@ -11,11 +11,6 @@
 	<classpathentry kind="lib" path="C:/Users/raull/Downloads/byte-buddy-1.9.13.jar"/>
 	<classpathentry kind="lib" path="C:/Users/raull/Downloads/byte-buddy-agent-1.9.13.jar"/>
 	<classpathentry kind="lib" path="C:/Users/raull/Downloads/objenesis-tck-3.0.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/pedro/Desktop/byte-buddy-1.9.13.jar"/>
-	<classpathentry kind="lib" path="C:/Users/pedro/Desktop/byte-buddy-agent-1.9.13 (1).jar"/>
-	<classpathentry kind="lib" path="C:/Users/pedro/Desktop/byte-buddy-agent-1.9.13.jar"/>
-	<classpathentry kind="lib" path="C:/Users/pedro/Desktop/mockito-core-2.28.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/pedro/Desktop/objenesis-tck-3.0.1 (2).jar"/>
-	<classpathentry kind="lib" path="C:/Users/pedro/Desktop/objenesis-tck-3.0.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -5,12 +5,13 @@ import labCliente.DadosCliente;
 import static org.mockito.Mockito.*;
 import java.util.ArrayList;
 
-class TesteCliente {
+public class TesteCliente {
 	ArrayList<ClasseBasicaCliente> listaCliente = new ArrayList<ClasseBasicaCliente>();
 	ClasseBasicaCliente cliente = new ClasseBasicaCliente();
 	ClasseBasicaCliente cliente2 = new ClasseBasicaCliente();
+	
 	@Test
-	void setup() {
+	public void setup() {
 		ArrayList<ClasseBasicaCliente> listaClienteArray = new ArrayList<ClasseBasicaCliente>();
 		cliente.setCodigoCliente(1);
 		cliente.setEmailCliente("raul@email.com");
@@ -36,12 +37,11 @@ class TesteCliente {
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 	}
 
 	@Test
-	void cadastrarClienteTeste() {
+	public void cadastrarClienteTeste() {
 		ClasseBasicaCliente cliente = new ClasseBasicaCliente();
 		
 		cliente.setCodigoCliente(4);

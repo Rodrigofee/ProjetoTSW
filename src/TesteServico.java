@@ -59,7 +59,6 @@ import labServico.DadosServico;
 			assertEquals(true,daoFalsoServico.cadastrarServico(servico));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 	}
 
