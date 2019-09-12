@@ -12,6 +12,14 @@ public class TesteCliente {
 	
 	@Test
 	public void setup() {
+		// Arranjo de Dados de Entrada
+		
+		// Ação
+		
+		// Assert
+		
+		
+		
 		ArrayList<ClasseBasicaCliente> listaClienteArray = new ArrayList<ClasseBasicaCliente>();
 		cliente.setCodigoCliente(1);
 		cliente.setEmailCliente("raul@email.com");
